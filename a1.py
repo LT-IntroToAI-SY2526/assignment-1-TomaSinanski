@@ -1,5 +1,5 @@
 # Assignment 1: AI-Generated Python Problems
-# Name: [Your Name Here]
+# Name: Toma Sinanski
 
 """
 AI-Generated Problem Set
@@ -22,8 +22,14 @@ Remember: The goal is to LEARN, not just get working code!
 MY ORIGINAL AI PROMPT:
 [Paste the prompt you used to generate your problem set here]
 
-Example: "I'm learning Python basics in a high school programming class. 
-I have some experience with Java. Can you create 5-7 practice problems that cover..."
+Example: "I'm learning Python basics in a high school programming class. I have some experience with [mention your previous programming language if any, or say 'I'm new to programming']. Can you create 5-7 practice problems that cover:
+> - Variables and basic data types
+> - Conditionals (if/elif/else)
+> - Loops (for and while)
+> - Functions
+> - Basic list operations
+> 
+> Make them progressively more challenging. Make sure each problem has clear instructions and example inputs/outputs."
 """
 
 # =============================================================================
@@ -31,27 +37,110 @@ I have some experience with Java. Can you create 5-7 practice problems that cove
 # =============================================================================
 
 """
-PROBLEM 1: [Problem Title/Description]
-[Copy the complete problem description from your AI assistant]
+🐍 Python Practice Problems
+1. Variables and Data Types: Favorite Number
+
+Task:
+Create a program that asks the user for their name and their favorite number. Print a sentence that combines both.
 
 Example:
-Problem: Write a function called 'is_even' that takes an integer and returns 
-True if the number is even, False if it's odd.
 
-Example inputs/outputs:
-- is_even(4) should return True
-- is_even(7) should return False
+Input:
+Name: Alice
+Favorite number: 7
+
+Output:
+Hello Alice! Your favorite number is 7.
+
+"""
+# Ask the user for their name
+name = input("Name: ")
+favorite_number = input("Favorite number: ")
+print("Hello " + name + "! Your favorite number is " + favorite_number)
+
 """
 
+2. Conditionals: Even or Odd
+
+Task:
+Write a program that asks the user for an integer and prints whether it’s even or odd.
+
+Example:
+
+Input: 12
+Output: 12 is even.
+
+Input: 9
+Output: 9 is odd.
+
+3. Loops: Counting Down
+
+Task:
+Write a program that asks the user for a positive integer n and then prints a countdown from n to 1.
+
+Example:
+
+Input: 5
+Output:
+5
+4
+3
+2
+1
+
+4. Functions: Temperature Converter
+
+Task:
+Write a function celsius_to_fahrenheit(c) that takes a temperature in Celsius and returns it in Fahrenheit.
+Then ask the user for a Celsius value, call the function, and print the result.
+
+Formula:
+
+F = (C × 9/5) + 32
 
 
+Example:
 
+Input: 0
+Output: 0°C is 32.0°F
 
+5. Lists: Average of Numbers
 
+Task:
+Ask the user to enter 5 numbers (one at a time) and store them in a list.
+Then calculate and print the average.
 
+Example:
 
+Input: 3, 5, 8, 10, 4
+Output: The average is 6.0
 
+6. Loops + Conditionals: Multiplication Table
 
+Task:
+Ask the user for a number n. Print its multiplication table from 1 to 10.
+(Hint: use a for loop).
+
+Example:
+
+Input: 5
+Output:
+5 x 1 = 5
+5 x 2 = 10
+...
+5 x 10 = 50
+
+7. Functions + Lists + Loops: Find the Largest Number
+
+Task:
+Write a function find_max(numbers) that takes a list of numbers and returns the largest one.
+Ask the user to enter numbers separated by spaces, store them in a list, and call your function.
+
+Example:
+
+Input: 10 4 25 7 15
+Output: The largest number is 25
+"""
 
 # =============================================================================
 # PART 3: TESTING YOUR SOLUTIONS
