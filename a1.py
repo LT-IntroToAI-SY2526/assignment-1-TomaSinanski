@@ -20,16 +20,14 @@ Remember: The goal is to LEARN, not just get working code!
 
 """
 MY ORIGINAL AI PROMPT:
-[Paste the prompt you used to generate your problem set here]
-
-Example: "I'm learning Python basics in a high school programming class. I have some experience with [mention your previous programming language if any, or say 'I'm new to programming']. Can you create 5-7 practice problems that cover:
-> - Variables and basic data types
-> - Conditionals (if/elif/else)
-> - Loops (for and while)
+"I'm learning Python basics in a high school programming class. I have some experience with Java and a little bit of html/bootstrap. Can you create 7 practice problems that cover:
+> - How ariables and basic data types work
+> - if/else/elif
+> - for and while loops
 > - Functions
 > - Basic list operations
 > 
-> Make them progressively more challenging. Make sure each problem has clear instructions and example inputs/outputs."
+> Make sure each problem has clear instructions and example inputs/outputs."
 """
 
 # =============================================================================
@@ -52,7 +50,7 @@ Favorite number: 7
 Output:
 Hello Alice! Your favorite number is 7.
 
-"""
+""" 
 # Ask the user for their name
 name = input("Name: ")
 favorite_number = input("Favorite number: ")

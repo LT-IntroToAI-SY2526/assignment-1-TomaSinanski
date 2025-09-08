@@ -1,4 +1,5 @@
-"""Assignment 1
+"""
+Assignment 1
 
 Fill in the following function skeletons - descriptions are provided in 
 the docstring (the triple quote thing at the top of each function)
@@ -20,27 +21,22 @@ from typing import List, TypeVar
 def absolute(n: int) -> int:
     """Gives the absolute value of the passed in number. Cannot use the built in
     function `abs`.
-
-    Args:
-        n - the number to take the absolute value of
-
-    Returns:
-        the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
+    if n < 0:
+        return -n
+    else:
+        return n
+    
 
 
 def factorial(n: int) -> int:
     """Takes a number n, and computes the factorial n! You can assume the passed in
     number will be positive
-
-    Args:
-        n - the number to compute factorial of
-
-    Returns:
-        factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+    result = 1
+    for i in range(1, n+1):
+        result = result * i
+    return result
 
 
 T = TypeVar("T")
