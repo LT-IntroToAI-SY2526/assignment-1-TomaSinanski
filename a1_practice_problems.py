@@ -53,7 +53,15 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+    #Java Method
+    # result = []
+    # for i in range(len(lst)):
+    #     if i % 2 == 0:
+    #         result.append(lst[i])
+    # return result
+    
+    #Python Way
+    return lst[::2]
 
 
 def sum_list(lst: List[int]) -> int:
@@ -66,7 +74,10 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    total = 0
+    for i in lst:
+        total += i
+    return total
 
 
 def mean(lst: List[int]) -> float:
@@ -78,7 +89,10 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    total = 0
+    for i in lst:
+        total += i
+    return total/len(lst)
 
 
 def median(lst: List[int]) -> float:
