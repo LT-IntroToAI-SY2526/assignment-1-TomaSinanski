@@ -96,18 +96,12 @@ def mean(lst: List[int]) -> float:
 
 
 def median(lst: List[int]) -> float:
-    """Takes an ordered list of numbers, and returns the median of the numbers.
-
-    If the list has an even number of values, it computes the mean of the two center
-    values.
-
-    Args:
-        lst - an ordered list of numbers
-
-    Returns:
-        the median of the passed in list
-    """
-    raise NotImplementedError("median")
+    length = len(lst)
+    middle = length//2
+    if length % 2 == 1:
+        return float(lst[middle])
+    else:
+        return (list[middle] + list[middle-1])/2
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:

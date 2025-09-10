@@ -70,6 +70,13 @@ Output: 12 is even.
 
 Input: 9
 Output: 9 is odd.
+"""
+num = input("Number: ")
+if num % 2 == 0:
+    print(num + "is even.")
+else :
+    print(num + "is odd.")
+"""
 
 3. Loops: Counting Down
 
@@ -85,6 +92,12 @@ Output:
 3
 2
 1
+"""
+start = input("Starting value: ")
+while start > 0:
+    print(start + "/n")
+    start -= 1
+"""
 
 4. Functions: Temperature Converter
 
@@ -101,6 +114,12 @@ Example:
 
 Input: 0
 Output: 0°C is 32.0°F
+"""
+def celsius_to_fahrenheit(c: float)->float:
+    return (c * 9/5) + 32
+celsius = input("Temperature in celsius: ")
+print(celsius + "°C is " + celsius_to_fahrenheit(celsius) + "°F")
+"""
 
 5. Lists: Average of Numbers
 
@@ -112,6 +131,14 @@ Example:
 
 Input: 3, 5, 8, 10, 4
 Output: The average is 6.0
+"""
+num1 = input("Add number: ")
+num2 = input("Add number: ")
+num3 = input("Add number: ")
+num4 = input("Add number: ")
+num5 = input("Add number: ")
+print("The average is " + (num1+num2+num3+num4+num5)/5)
+"""
 
 6. Loops + Conditionals: Multiplication Table
 
@@ -127,6 +154,19 @@ Output:
 5 x 2 = 10
 ...
 5 x 10 = 50
+"""
+num = input("Number: ")
+print(num + " x 1 = " + num * 1)
+print(num + " x 2 = " + num * 2)
+print(num + " x 3 = " + num * 3)
+print(num + " x 4 = " + num * 4)
+print(num + " x 5 = " + num * 5)
+print(num + " x 6 = " + num * 6)
+print(num + " x 7 = " + num * 7)
+print(num + " x 8 = " + num * 8)
+print(num + " x 9 = " + num * 9)
+print(num + " x 10 = " + num * 10)
+"""
 
 7. Functions + Lists + Loops: Find the Largest Number
 
@@ -139,6 +179,17 @@ Example:
 Input: 10 4 25 7 15
 Output: The largest number is 25
 """
+def find_max(numbers):
+    largest = numbers[0]
+    for num in numbers:
+        if num > largest:
+            largest = num
+    return largest
+user_input = input("Enter numbers separated by spaces: ")
+numbers_list = [int(num) for num in user_input.split()]
+largest = find_max(numbers_list)
+print("The largest number is", largest)
+
 
 # =============================================================================
 # PART 3: TESTING YOUR SOLUTIONS
