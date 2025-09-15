@@ -105,25 +105,22 @@ def median(lst: List[int]) -> float:
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
-    """Given an list of names (strings), play 'duck duck goose' with it, knocking out
-    every third name (wrapping around) until only two names are left.
-
-    In other words, when you hit the end of the list, wrap around and keep counting from
-    where you were.
-
-    For example, if given this list ["roscoe", "kim", "woz", "solin"], you'd first
-    knock out woz. Then first 'duck' on solin, wrap around to 'duck' on roscoe and
-    'goose' on kim - knocking him out and leaving only roscoe and solin.
-
-    You may assume the list has 3+ names to start
-
-    Args:
-        lst - a list of names (strings)
-
-    Returns:
-        the resulting list after playing duck duck goose
-    """
-    raise NotImplementedError("duck_duck_goose")
+    position = 0
+    current = "duck1"
+    while len(lst) > 2:
+        if current == "duck1":
+            current = "duck2"
+            position += 1
+        elif current == "duck2":
+            current = "goose"
+            position += 1
+        else:
+            current = "duck1"
+            lst.pop(position)
+        if position == len(lst):
+            position = 0
+    return lst
+    
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
@@ -140,6 +137,8 @@ if __name__ == "__main__":
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
 
     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
-    assert duck_duck_goose(names) == ["roscoe", "law"]
+    assert duck_duck_goose(names) == ["roscoe", "law"], "failed ddg 1"
+    names = ["miguel", "emma", "franco", "lucas", "maks"]
+    assert duck_duck_goose(names) == ["emma", "lucas"], "failed ddg 2"
 
     print("All tests passed!")
